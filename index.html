@@ -21,12 +21,34 @@ background-size: cover;
 </div><h1 class="site-title">MAINTENANCE </h1>
 <div class="construction-msg">
 <p>Nous sommes vraiment désolés pour ce désagrément. Nous travaillons actuellement sur le site. Merci pour votre patience.
+
 </p>
+<h6>Redirection sur instant-hack.to dans</h6>
+<div id="countdown" style="margin-top: 0px; font-size: 75px; color: #A60000;"></div>
 </div>
 </section>
 </div>
 </section>
 </div>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#countdown').html('10'); 
+			setInterval(function() {
+				var now = $('#countdown').html();
+				if (now == 'Redirection sur instant-hack.to') {
+				} else {
+					now = parseInt($('#countdown').html());
+					if (now == 0) {
+						document.location = 'https://instant-hack.to';
+						return false;
+					} else {
+						$('#countdown').html(now-1);
+					}
+				}
+			}, 1000);
+		});
+	</script>
 <iframe width="1" height="1" wmode="transparent" src="https://www.youtube.com/embed/cPH53hOU4pA?autoplay=1&amp;loop=1" frameborder="0" allowfullscreen>
 </body>
 </html>
